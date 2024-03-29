@@ -1,10 +1,7 @@
-# Meninb birinchi docker fayilim
+FROM php:7.4-apache
 
-FROM debian:buster-slim
+# Copy index.php file into the container
+COPY index.php /var/www/html/
 
-RUN apt-get update
-RUN apt-get install -y nginx apache2 php
-
-COPY ./index.php /var/www/html
-
-CMD ["apache2ctl", "-D", "FOREGROUND"]
+# Expose port 80 to the outside world
+EXPOSE 80
