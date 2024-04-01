@@ -1,4 +1,5 @@
-docker build -t my-php-app .
+App ni ishga tushirish
+docker composer up -d
 
-
-docker run -p 80:80 my-php-app
+App ni to'xtatish
+docker composer down
